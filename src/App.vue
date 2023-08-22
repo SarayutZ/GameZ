@@ -16,13 +16,17 @@
 
     <div class="button mt-5 d-flex justify-content-center">
       <button class="btn btn-danger" @click="playGame"  data-bs-toggle="modal" data-bs-target="#exampleModal">เกมเป่ายิงฉุบ</button>
+      <button @click="Resetgame" class="btn btn-success mx-4">เริ่มใหม่</button>
     </div>
   </div>
 
-  <div class="score mt-3 text-center">
-      <p class="fs-5">{{ scorePlayer1 }} : {{ scorePlayer2 }}</p>
-      
+  <div class="score mt-3 d-flex justify-content-center">
+    <div class="d-flex justify-content-center bg-success p-2 text-dark bg-opacity-25 ">
+
+      <p class="fs-5"> คะแนน {{ scorePlayer1 }} : {{ scorePlayer2 }}</p>
     </div>
+</div>
+
 
 
 
@@ -99,7 +103,11 @@ export default {
         this.imagesplayer ='https://i.pinimg.com/564x/92/36/09/92360976a54730f1880144b3f5b10132.jpg';
         
       }
-    }
+    },
+      Resetgame(){
+        window.location.reload(); // รีเซ็ตหน้าเว็บ
+      }
+    
     }
   
 };
